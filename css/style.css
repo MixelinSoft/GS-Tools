@@ -1,16 +1,14 @@
 body {
-  margin: 0;
-  padding: 0;
   background-color: lightslategrey;
 }
 a {
-  text-decoration: none
+  text-decoration: none;
 }
-
-
-.wrapper{
+* {
+  box-sizing: border-box;
+}
+.wrapper {
   margin: 0 auto 0 auto;
-  max-width: 1024px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,9 +23,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px 0 20px;
-  box-sizing: border-box;
 }
-
 
 .tools {
   display: flex;
@@ -35,24 +31,46 @@ a {
   flex-wrap: wrap;
 }
 
-.tool{
-  box-sizing: border-box;
+.tool {
   width: 40%;
-  height: 80px;
-  border: 1px solid black;
-  background-color: #bec2c6;
-  color: black;
-  border-radius: 30px;
+  height: 35vh;
   margin: 20px 5% 20px 5%;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-size:25px;
-  text-align: center;
-  box-shadow: 0px 0px 8px 1px black;
+  outline: none;
+  border: 3px solid rgba(163, 163, 163, 0.4);
+  border-top-color: rgba(156, 156, 156, 0.3);
+  border-radius: 30px;
+  background: linear-gradient(rgb(0, 0, 0), rgb(44, 44, 44));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0) inset,
+    0 1px 1px 1px rgba(255, 255, 255, 0.2), 0 -1px 1px 1px rgba(0, 0, 0, 0);
+  transition: 0.2s ease-in-out;
 }
 
+.tool:hover:not(:active) {
+  box-shadow: 0 0 25vh rgba(0, 0, 0, 0.63) inset,
+    0 1px 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.tool:active {
+  background: linear-gradient(rgb(95, 95, 95), rgb(0, 0, 0));
+  box-shadow: 0 0 3px rgba(104, 104, 104, 0.5) inset,
+    0 10px 10px 0px rgba(0, 0, 0, 0.4), 0 -1px 1px 1px rgba(0, 0, 0, 0.911);
+}
+
+.tool__icon {
+  filter: invert(1);
+  position: relative;
+  top: 10%;
+}
+.tool__text {
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 30%;
+  font-size: 6vw;
+  text-align: center;
+}
 .footer {
   height: 40px;
   background-color: white;
@@ -61,16 +79,12 @@ a {
   align-items: center;
 }
 
-
-
-
-
-.main{
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .script {
-  font-size: 48px;
+  font-size: 3vh;
 }
