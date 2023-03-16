@@ -1,0 +1,49 @@
+.tools {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tool {
+  width: 150px;
+  height: 150px;
+  margin: 1.56vw;
+  padding: 0 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+  border: 3px solid rgba(163, 163, 163, 0.4);
+  border-top-color: rgba(156, 156, 156, 0.3);
+  border-radius: 20px;
+  background: linear-gradient(rgb(0, 0, 0), rgb(44, 44, 44));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0) inset, 0 1px 1px 1px rgb(255, 255, 255),
+    0 10px 10px 5px rgba(0, 0, 0, 0.822);
+  transition: 0.2s ease-in-out;
+}
+.tool:hover:not(:active) {
+  box-shadow: 0 0 25vh rgba(0, 0, 0, 0.63) inset,
+    0 1px 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.tool:active {
+  background: linear-gradient(rgb(95, 95, 95), rgb(0, 0, 0));
+  box-shadow: 0 0 3px rgba(104, 104, 104, 0.5) inset,
+    0 10px 10px 0px rgba(0, 0, 0, 0.4), 0 -1px 1px 1px rgba(0, 0, 0, 0.911);
+}
+
+.tool__icon {
+  filter: invert(1);
+  position: relative;
+  top: 10%;
+  width: 20%;
+}
+.tool__text {
+  font-family: "Roboto", sans-serif;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 30%;
+  font-size: 20px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
