@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Калибровка Топлива</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   
@@ -22,9 +23,29 @@
       </div>
     </nav>
   </header>
+      <h1 class="title">
+        GS Tools - Calibrate (Alpha 0.01)
+      </h1>
   
     <main class="main">
- <script src="/main.js" class="script"></script>
+      <form action="" class="form">
+        <p>Введите уровень с метрштока через точку</p>
+        <input required type="number" id="height" placeholder="Уровень топлива">
+        <p>Введите обьём с калибровочной таблицы для верхнего значения
+        </p>
+        <input required type="number" id="capHi" placeholder="Верхнее значение"/>
+        <p>Введите обьём с калибровочной таблицы для нижнего значения
+        </p>
+        <input required type="number" id="capLow" placeholder="Нижнее значение"/>
+        <p>Введите объём трубопровода</p>
+        <input required type="number" id="tube" placeholder="Трубопровод"/>
+        <button type="submit" class="button">Рассчитать!</button>
+      </form>
+      <br>
+      <div>
+        <div id="result"></div>
+      </div>
+      
     </main>
     
     <footer class="footer">
@@ -33,5 +54,6 @@
    </div>
  </footer>
   </div>
+  <script src="../js/calibrate.js"></script>
  </body>
 </html>
