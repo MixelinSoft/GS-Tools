@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -9,51 +10,53 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  
+
   <div class="wrapper">
-    
+
     <header class="header">
-    <nav class="nav">
-      <div class="nav__logo">
-        <img src="/img/logo.png" alt="logo" height="30px">
-      </div>
-      <div class="burger-btn">
-        Тут будет бургер)
-      </div>
-    </nav>
-  </header>
-      <h1 class="title">
-        GS Tools - Calibrate (Alpha 0.01)
-      </h1>
-  
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="/img/logo.png" alt="logo" height="30px">
+        </div>
+        <div class="burger-btn">
+          Тут будет бургер)
+        </div>
+      </nav>
+    </header>
+    <h1 class="title">
+      GS Tools - Calibrate (Alpha v0.02)
+    </h1>
+
     <main class="main">
       <form action="" class="form">
         <p>Введите уровень с метрштока через точку</p>
-        <input required type="number" id="height" placeholder="Уровень топлива">
+        <input required type="" id="height" placeholder="Уровень топлива">
         <p>Введите обьём с калибровочной таблицы для верхнего значения
         </p>
-        <input required type="number" id="capHi" placeholder="Верхнее значение"/>
+        <input required type="number" id="capHi" placeholder="Верхнее значение" />
         <p>Введите обьём с калибровочной таблицы для нижнего значения
         </p>
-        <input required type="number" id="capLow" placeholder="Нижнее значение"/>
+        <input required type="number" id="capLow" placeholder="Нижнее значение" />
         <p>Введите объём трубопровода</p>
-        <input required type="number" id="tube" placeholder="Трубопровод"/>
+        <input required type="number" id="tube" placeholder="Трубопровод" />
         <button type="submit" class="button">Рассчитать!</button>
       </form>
       <br>
       <div>
         <div id="result"></div>
       </div>
-      
+
     </main>
-    
+
     <footer class="footer">
-   <div class="footer__text">
-     Mixelin 2023@
-   </div>
- </footer>
+      <div class="footer__text">
+        Mixelin 2023@
+      </div>
+    </footer>
   </div>
   <script src="../js/calibrate.js"></script>
- </body>
+</body>
+
 </html>
