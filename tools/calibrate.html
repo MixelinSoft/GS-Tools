@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Калибровка Топлива</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-  <title>Калибровка Топлива</title>
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <div class="nav__logo">
+            <img src="/img/logo.png" alt="logo" height="30px" />
+          </div>
+          <div class="burger-btn">Тут будет бургер)</div>
+        </nav>
+      </header>
+      <h1 class="title">GS Tools - Calibrate (Alpha v0.02)</h1>
 
-<body>
-
-  <div class="wrapper">
-
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__logo">
-          <img src="/img/logo.png" alt="logo" height="30px">
+      <main class="main">
+        <form action="" class="form">
+          <p>Введите уровень с метрштока через точку</p>
+          <p>(Например - 123.3)</p>
+          <input required type="" id="height" placeholder="Уровень топлива" />
+          <br />
+          <p>Введите обьём с калибровочной таблицы для верхнего значения</p>
+          <p>(Например 1234)</p>
+          <input
+            required
+            type="number"
+            id="capHi"
+            placeholder="Верхнее значение"
+          />
+          <br />
+          <p>Введите обьём с калибровочной таблицы для нижнего значения</p>
+          <p>(Например 1234)</p>
+          <input
+            required
+            type="number"
+            id="capLow"
+            placeholder="Нижнее значение"
+          />
+          <br />
+          <p>Введите объём трубопровода</p>
+          <p>(Например 123)</p>
+          <input required type="number" id="tube" placeholder="Трубопровод" />
+          <br />
+          <button type="submit" class="button">Рассчитать!</button>
+        </form>
+        <br />
+        <div>
+          <div id="result"></div>
         </div>
-        <div class="burger-btn">
-          Тут будет бургер)
-        </div>
-      </nav>
-    </header>
-    <h1 class="title">
-      GS Tools - Calibrate (Alpha v0.02)
-    </h1>
+      </main>
 
-    <main class="main">
-      <form action="" class="form">
-        <p>Введите уровень с метрштока через точку</p>
-        <p>(Например - 123.3)</p>
-        <input required type="" id="height" placeholder="Уровень топлива">
-        <br>
-        <p>Введите обьём с калибровочной таблицы для верхнего значения
-        </p>
-        <p>(Например 1234)</p>
-        <input required type="number" id="capHi" placeholder="Верхнее значение" />
-        <br>
-        <p>Введите обьём с калибровочной таблицы для нижнего значения
-        </p>
-        <p>(Например 1234)</p>
-        <input required type="number" id="capLow" placeholder="Нижнее значение" />
-        <br>
-        <p>Введите объём трубопровода</p>
-        <p>(Например 123)</p>
-        <input required type="number" id="tube" placeholder="Трубопровод" />
-        <br>
-        <button type="submit" class="button">Рассчитать!</button>
-      </form>
-      <br>
-      <div>
-        <div id="result"></div>
-      </div>
-
-    </main>
-
-    <footer class="footer">
-      <div class="footer__text">
-        Mixelin 2023@
-      </div>
-    </footer>
-  </div>
-  <script src="../js/calibrate.js"></script>
-</body>
-
+      <footer class="footer">
+        <div class="footer__text">Mixelin 2023@</div>
+      </footer>
+    </div>
+    <script src="../js/calibrate.js"></script>
+  </body>
 </html>

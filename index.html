@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GS Tools</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/tools.css" />
+    <link rel="stylesheet" href="/css/adaptive.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <div class="nav__logo">
+            <img src="img/logo.png" alt="logo" height="30px" />
+          </div>
+          <div class="burger-btn">Тут будет бургер)</div>
+        </nav>
+      </header>
 
-  <title>Калибровка Топлива</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/tools.css">
-  <link rel="stylesheet" href="/css/adaptive.css">
-</head>
-
-<body>
-
-  <div class="wrapper">
-
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__logo">
-          <img src="img/logo.png" alt="logo" height="30px">
-        </div>
-        <div class="burger-btn">
-          Тут будет бургер)
-        </div>
-      </nav>
-    </header>
-
-    <main class="main">
-      <div class="tools">
-        <article class="tool">
-          <img src="/icons/meter.svg" alt="" width="20%" class="tool__icon">
-          <a href="/tools/calibrate.html" class="tool__text">Калибровка топлива</a>
-        </article>
-        <!-- <article class="tool"><img src="/icons/15.svg" alt="" class="tool__icon"><a href="tools/calc15.html"
+      <main class="main">
+        <div class="tools">
+          <article class="tool">
+            <img src="/icons/meter.svg" alt="" width="20%" class="tool__icon" />
+            <a href="/tools/calibrate.html" class="tool__text"
+              >Калибровка топлива</a
+            >
+          </article>
+          <!-- <article class="tool"><img src="/icons/15.svg" alt="" class="tool__icon"><a href="tools/calc15.html"
             class="tool__text">Калькулятор топлива при 15°</a></article> -->
 
-            <article class="tool">
-              <img src="/icons/meter.svg" alt="" width="20%" class="tool__icon">
-              <a href="/tools/calibrate16.html" class="tool__text">Калибровка топлива АЗС16</a>
-            </article>
-
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer__text">
-        MixelinSoft 2023©
-      </div>
-    </footer>
-  </div>
-  <!-- <script src="/js/main.js"></script> -->
-</body>
-
+          <article class="tool">
+            <img src="/icons/meter.svg" alt="" width="20%" class="tool__icon" />
+            <a href="/tools/calibrate16.html" class="tool__text"
+              >Калибровка топлива АЗС16</a
+            >
+          </article>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">MixelinSoft 2023©</div>
+      </footer>
+    </div>
+    <!-- <script src="/js/main.js"></script> -->
+  </body>
 </html>
