@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Калибровка Топлива</title>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <div class="nav__logo">
+            <img src="/img/logo.png" alt="logo" height="30px" />
+          </div>
+          <div class="burger-btn">Тут будет бургер)</div>
+        </nav>
+      </header>
 
-        <header class="header">
-            <nav class="nav">
-                <div class="nav__logo">
-                    <img src="/img/logo.png" alt="logo" height="30px">
-                </div>
-                <div class="burger-btn">
-                    Тут будет бургер)
-                </div>
-            </nav>
-        </header>
+      <main class="main">
+        <form action="" class="form">
+          <p>Выберите вид топлива</p>
+          <select name="fuelType" id="fuelType">
+            <option value="a95e">1. А95 Energy</option>
+            <option value="a92">2. А92</option>
+            <option value="a95">3. А95</option>
+            <option value="diesel" disabled>4. Дизельное топливо</option>
+          </select>
+          <p>Введите уровень с метрштока через точку</p>
+          <p>(Например - 123.3)</p>
+          <input required type="" id="height" placeholder="Уровень топлива" />
+          <br />
+          <button type="submit" class="button">Рассчитать!</button>
+        </form>
+        <br />
+        <div>
+          <div id="result"></div>
+        </div>
+      </main>
 
-
-        <main class="main">
-            <form action="" class="form">
-                <p>Выберите вид топлива</p>
-                <select name="fuelType" id="fuelType">
-                    <option value="a95e">1. А95 Energy</option>
-                    <option value="a92"></option>
-                    <option value="a95" disabled></option>
-                    <option value="diesel" disabled></option>
-                </select>
-                <p>Введите уровень с метрштока через точку</p>
-                <p>(Например - 123.3)</p>
-                <input required type="" id="height" placeholder="Уровень топлива">
-                <br>
-                <button type="submit" class="button">Рассчитать!</button>
-            </form>
-            <br>
-            <div>
-                <div id="result"></div>
-            </div>
-
-        </main>
-
-        <footer class="footer">
-            <div class="footer__text">
-                Mixelin 2023@
-            </div>
-        </footer>
+      <footer class="footer">
+        <div class="footer__text">Mixelin 2023©</div>
+      </footer>
     </div>
     <script src="../tools/calibrate16/tablesGS16.js"></script>
     <script src="../tools/calibrate16/calibrate16.js"></script>
-</body>
-
+  </body>
 </html>
