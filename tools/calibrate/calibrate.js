@@ -75,7 +75,7 @@ document
     );
     document.querySelector(
       "#calibrate__result"
-    ).innerHTML = `Объём топлива = ${calculate}л.`;
+    ).innerHTML = `Объём топлива = ${calculate}л. </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
     document.querySelector("#calibrate__result").scrollIntoView();
   });
 
