@@ -83,6 +83,7 @@
             АЗС Нет в списке
           </button>
         </form>
+        <a href="/index.html" class="btn back-btn">← Вернуться назад</a>
       </section>
 
       <section class="autocalibrate display-none">
@@ -113,6 +114,8 @@
             Рассчитать!
           </button>
         </form>
+        <a href="/tools/calibrate/calibrate.html" class="btn back-btn">← Вернуться назад</a>
+        
       </section>
 
       <section class="manualcalibrate display-none">
@@ -159,16 +162,14 @@
             placeholder="Трубопровод"
             class="form__select"
           />
-          <button type="submit" class="btn txt-btn">Рассчитать!</button>
+          <button type="submit" class="btn txt-btn" id="manual-result">Рассчитать!</button>
         </form>
-        <br />
-        <div>
-          <div id="result"></div>
-        </div>
+
       </section>
 
       <p class="calibrate__result" id="calibrate__result"></p>
       <p class="calibrate__alert" id="calibate__alert"></p>
+      
     </main>
 
     <footer class="footer">MixelinSoft© 2023</footer>

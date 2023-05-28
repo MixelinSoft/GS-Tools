@@ -27,6 +27,7 @@ const autoCalibrate = (height, tank) => {
 
   return autoCalibrateResult;
 };
+
 // Manual calibrate function
 const manualCalibrate = (height, capacityHi, capacityLow, tube) => {
   if (+height - Math.round(+height) != 0) {
@@ -40,11 +41,13 @@ const manualCalibrate = (height, capacityHi, capacityLow, tube) => {
     return +tube + +capacityLow;
   }
 };
+
 // Diable default events
 document.querySelector(".form").addEventListener("submit", function (e) {
   e.preventDefault();
 });
 
+// Class togglers
 btnAutoCalibrate.addEventListener("click", () => {
   selectGsSection.classList.toggle("display-none");
   autoCalibrateSection.classList.toggle("display-none");
@@ -72,13 +75,15 @@ document
     );
     document.querySelector(
       "#calibrate__result"
-    ).innerHTML = `Объём топлива = ${calculate}`;
+    ).innerHTML = `Объём топлива = ${calculate}л.`;
+    document.querySelector("#calibrate__result").scrollIntoView();
   });
 
 document
   .querySelector(".manualcalibrate__form")
   .addEventListener("submit", (e) => {
     e.preventDefault();
+
     const manualCalibrateHeight =
       document.querySelector("#maunualHeight").value;
     const manualCalibrateCapacityHi =
@@ -94,5 +99,9 @@ document
     );
     document.querySelector(
       "#calibrate__result"
-    ).innerHTML = `Объём топлива = ${calculate}`;
+    ).innerHTML = `Объём топлива = ${calculate}л. </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
+    document.querySelector("#calibrate__result").scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
   });
