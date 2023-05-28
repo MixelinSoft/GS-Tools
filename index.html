@@ -31,44 +31,62 @@
     />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/tools.css" />
-    <link rel="stylesheet" href="/css/adaptive.css" />
   </head>
 
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
-          <div class="nav__logo">
-            <img src="img/logo.png" alt="logo" height="30px" />
-          </div>
-          <div class="burger-btn">Тут будет бургер)</div>
-        </nav>
-      </header>
+    <header class="header">
+      <a href="/index.html" class="header__logo-link">
+        <img src="/img/logo.png" alt="logo" class="header__logo-img" />
+      </a>
 
-      <main class="main">
-        <div class="tools">
-          <article class="tool">
-            <img src="/icons/meter.svg" alt="" width="20%" class="tool__icon" />
-            <a href="/tools/calibrate.html" class="tool__text"
-              >Калибровка топлива</a
-            >
-          </article>
-          <!-- <article class="tool"><img src="/icons/15.svg" alt="" class="tool__icon"><a href="tools/calc15.html"
-            class="tool__text">Калькулятор топлива при 15°</a></article> -->
-
-          <article class="tool">
-            <img src="/icons/meter.svg" alt="" width="20%" class="tool__icon" />
-            <a href="/tools/calibrate16.html" class="tool__text"
-              >Калибровка топлива АЗС16</a
-            >
-          </article>
+      <nav class="nav">
+        <div class="nav__burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </main>
-      <footer class="footer">
-        <div class="footer__text">MixelinSoft 2023©</div>
-      </footer>
-    </div>
-    <!-- <script src="/js/main.js"></script> -->
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Главная страница</a>
+          </li>
+          <!-- <li class="nav__item">
+            <a href="/supply.html">О приложении</a>
+          </li>
+          <li class="nav__item">
+            <a href="/contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a href="/supply.html">Поддержать разработку</a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="main__title">Инструменты</h1>
+      <section class="tools">
+        <a href="/tools/calibrate/calibrate.html" class="btn tool calibrate">
+          <svg
+            class="tool__icon"
+            fill="#fff"
+            height="30px"
+            width="30px"
+            viewBox="0 0 390 390"
+            xml:space="preserve"
+          >
+            <path
+              d="M117.427,0v390h155.147V0H117.427z M210.715,40L195,50.761L179.285,40H210.715z M157.427,350V73.511
+	L195,99.239l37.573-25.728V117.5h-30v40h30v40h-30v40h30v40h-30v40h30V350H157.427z"
+            />
+          </svg>
+          <h2 class="tool__title">Калибровка топлива</h2>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">MixelinSoft© 2023</footer>
+
+    <script src="/js/index.js"></script>
   </body>
 </html>

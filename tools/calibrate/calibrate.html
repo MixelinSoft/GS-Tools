@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GS Tools</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="icons/favicon/site.webmanifest" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header__logo-link">
+        <img src="/img/logo.png" alt="logo" class="header__logo-img" />
+      </a>
+
+      <nav class="nav">
+        <div class="nav__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Главная страница</a>
+          </li>
+          <!-- <li class="nav__item">
+            <a href="/supply.html">О приложении</a>
+          </li>
+          <li class="nav__item">
+            <a href="/contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a href="/supply.html">Поддержать разработку</a>
+          </li>
+        </ul> -->
+      </nav>
+    </header>
+
+    <main class="main calibrate">
+      <h1 class="main__title">Калибровка топлива</h1>
+
+      <section class="selectGS">
+        <form class="calibrate__form form">
+          <label for="gsID" class="form__label">Выберите вашу АЗС:</label>
+          <select name="gsID" id="gsID" class="form__select" required>
+            <option disabled>Нажмите для выбора АЗС</option>
+            <option value="gs07" disabled>АЗС №7 "Примариус"</option>
+            <option value="gs29" disabled>АЗС №29 "Примариус"</option>
+            <option value="gs16" selected>АЗС №16 "Примариус"</option>
+            <option value="gs17" disabled>АЗС №17 "Примариус"</option>
+          </select>
+          <button class="calibrate__confirm btn txt-btn" id="calibrateConfirm">
+            Подтвердить выбор
+          </button>
+          <button class="calibrate__manual btn txt-btn" id="calibrateManual">
+            АЗС Нет в списке
+          </button>
+        </form>
+      </section>
+
+      <section class="autocalibrate display-none">
+        <form class="autocalibrate__form form">
+          <label for="fuelType" class="form__label">Выберите вид топлива</label>
+          <select
+            name="fuelType"
+            id="autocalibrateFuelType"
+            class="form__select"
+            required
+          >
+            <option value="a95e">1. А95 Energy</option>
+            <option value="a92">2. А92</option>
+            <option value="a95">3. А95</option>
+            <option value="diesel">4. Дизельное топливо</option>
+          </select>
+          <label class="form__label"
+            >Введите уровень с метрштока через точку (Например - 123.3)</label
+          >
+          <input
+            required
+            type=""
+            id="autocalibrateHeight"
+            placeholder="Уровень топлива"
+            class="form__select"
+          />
+          <button type="submit" class="btn txt-btn" id="autocalibrateResult">
+            Рассчитать!
+          </button>
+        </form>
+      </section>
+
+      <section class="manualcalibrate display-none">
+        <form class="manualcalibrate__form form">
+          <label for="maunualHeight" class="form__label"
+            >Введите уровень с метрштока через точку (Например - 123.3)</label
+          >
+          <input
+            required
+            type=""
+            id="maunualHeight"
+            placeholder="Уровень топлива"
+            class="form__select"
+          />
+          <label for="manualCapHi" class="form__label"
+            >Введите обьём с калибровочной таблицы для верхнего значения
+            (Например 4321)</label
+          >
+          <input
+            required
+            type="number"
+            id="manualCapHi"
+            placeholder="Верхнее значение"
+            class="form__select"
+          />
+          <label for="manualCapLow" class="form__label"
+            >Введите обьём с калибровочной таблицы для нижнего значения
+            (Например 1234)</label
+          >
+          <input
+            required
+            type="number"
+            id="manualCapLow"
+            placeholder="Нижнее значение"
+            class="form__select"
+          />
+          <label for="manualTube" class="form__label"
+            >Введите объём трубопровода (Например 123)</label
+          >
+          <input
+            required
+            type="number"
+            id="manualTube"
+            placeholder="Трубопровод"
+            class="form__select"
+          />
+          <button type="submit" class="btn txt-btn">Рассчитать!</button>
+        </form>
+        <br />
+        <div>
+          <div id="result"></div>
+        </div>
+      </section>
+
+      <p class="calibrate__result" id="calibrate__result"></p>
+      <p class="calibrate__alert" id="calibate__alert"></p>
+    </main>
+
+    <footer class="footer">MixelinSoft© 2023</footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/DB/gsDB.js"></script>
+    <script src="/tools/calibrate/calibrate.js"></script>
+  </body>
+</html>
