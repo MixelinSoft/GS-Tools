@@ -16,6 +16,8 @@ body
   background-color: $background
 a
   text-decoration: none
+  &:focus
+    outline: 3px solid grey
 
 .header
   display: flex
@@ -40,6 +42,9 @@ a
   cursor: pointer
   overflow: hidden
   z-index: 3
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  &:focus
+    outline: 3px solid grey
   span
     height: 4px
     width: 100%
@@ -125,6 +130,8 @@ a
   transition: transform .1s linear
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
   cursor: pointer
+  &:focus
+    outline: 3px solid grey
 
 .tool__title
   font-size: 18px
@@ -183,11 +190,18 @@ a
   margin-bottom: 15px
   padding: 10px
   cursor: pointer
+  &:focus
+    outline: 3px solid grey
 
 .calibrate__result
   text-align: center
   font-size: 22px
   font-weight: 700
 
+.calibrate__alert
+  text-align: center
+  font-size: 22px
+  font-weight: 700
+  color: red
 .display-none
   display: none

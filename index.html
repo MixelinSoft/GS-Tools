@@ -35,12 +35,16 @@
 
   <body>
     <header class="header">
-      <a href="/index.html" class="header__logo-link">
-        <img src="/img/logo.png" alt="logo" class="header__logo-img" />
+      <a href="/index.html" class="header__logo-link" tabindex="1">
+        <img
+          src="/img/logo_mobile30px.png "
+          alt="logo"
+          class="header__logo-img"
+        />
       </a>
 
       <nav class="nav">
-        <div class="nav__burger">
+        <div class="nav__burger" tabindex="2">
           <span></span>
           <span></span>
           <span></span>
@@ -66,7 +70,11 @@
     <main class="main">
       <h1 class="main__title">Инструменты</h1>
       <section class="tools">
-        <a href="/tools/calibrate/calibrate.html" class="btn tool calibrate">
+        <a
+          href="/tools/calibrate/calibrate.html"
+          class="btn tool calibrate"
+          tabindex="3"
+        >
           <svg
             class="tool__icon"
             fill="#fff"

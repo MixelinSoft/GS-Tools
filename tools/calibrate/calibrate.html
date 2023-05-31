@@ -36,7 +36,7 @@
   <body>
     <header class="header">
       <a href="/index.html" class="header__logo-link">
-        <img src="/img/logo.png" alt="logo" class="header__logo-img" />
+        <img src="/img/logo_mobile30px.png" alt="logo" class="header__logo-img" />
       </a>
 
       <nav class="nav">
@@ -70,10 +70,10 @@
         <form class="calibrate__form form">
           <label for="gsID" class="form__label">Выберите вашу АЗС:</label>
           <select name="gsID" id="gsID" class="form__select" required>
-            <option disabled>Нажмите для выбора АЗС</option>
+            <option value="unSelect" selected>Нажмите для выбора АЗС</option>
             <option value="gs07" disabled>АЗС №7 "Примариус"</option>
             <option value="gs29" disabled>АЗС №29 "Примариус"</option>
-            <option value="gs16" selected>АЗС №16 "Примариус"</option>
+            <option value="gs16">АЗС №16 "Примариус"</option>
             <option value="gs17" disabled>АЗС №17 "Примариус"</option>
           </select>
           <button class="calibrate__confirm btn txt-btn" id="calibrateConfirm">

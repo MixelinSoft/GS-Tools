@@ -27,6 +27,9 @@ body {
 a {
   text-decoration: none;
 }
+a:focus {
+  outline: 3px solid grey;
+}
 
 .header {
   display: -webkit-box;
@@ -66,6 +69,10 @@ a {
   cursor: pointer;
   overflow: hidden;
   z-index: 3;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.nav__burger:focus {
+  outline: 3px solid grey;
 }
 .nav__burger span {
   height: 4px;
@@ -198,6 +205,9 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
+.btn:focus {
+  outline: 3px solid grey;
+}
 
 .tool__title {
   font-size: 18px;
@@ -277,11 +287,21 @@ a {
   padding: 10px;
   cursor: pointer;
 }
+.form__select:focus {
+  outline: 3px solid grey;
+}
 
 .calibrate__result {
   text-align: center;
   font-size: 22px;
   font-weight: 700;
+}
+
+.calibrate__alert {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: red;
 }
 
 .display-none {
