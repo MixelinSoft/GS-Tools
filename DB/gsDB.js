@@ -1,10 +1,13 @@
 const gsDB = {
   gs16: {
+    gsId: 16,
+    gsFirm: "Примариус",
     phone: +380630000000,
     adress: "м. Днiпро, вул.Маяковського, 39",
     tables: {
       a95e: {
-        type: "A95 Energy",
+        type: "A-95 Energy",
+        typeId: "a95e",
         tankId: 1,
         tube: 101,
         maxHeight: 238,
@@ -38,7 +41,7 @@ const gsDB = {
       },
 
       a92: {
-        type: "А92",
+        type: "А-92",
         tankId: 2,
         tube: 114,
         maxHeight: 238,
@@ -72,7 +75,7 @@ const gsDB = {
       },
 
       a95: {
-        type: "A95",
+        type: "А-95",
         tankId: 3,
         tube: 128,
         maxHeight: 238,
@@ -105,7 +108,7 @@ const gsDB = {
         ],
       },
       diesel: {
-        type: "diesel",
+        type: "ДТ",
         tankId: 4,
         tube: 142,
         maxHeight: 238,
@@ -136,50 +139,6 @@ const gsDB = {
           20595, 20647, 20692, 20732, 20773, 20813, 20853, 20888, 20911, 20933,
           20955, 20978, 21000,
         ],
-      },
-    },
-  },
-  gs07: {
-    phone: +380630000000,
-    adress: "м. Днiпро, вул.Робоча 23-ж, 39",
-    tables: {
-      a95e: {
-        type: "0",
-        tankId: 0,
-        tube: 0,
-        maxHeight: 0,
-        maxCapacity: 0,
-        minCapcity: 0,
-        capacityTable: [],
-      },
-
-      a92: {
-        type: "0",
-        tankId: 0,
-        tube: 0,
-        maxHeight: 0,
-        maxCapacity: 0,
-        minCapcity: 0,
-        capacityTable: [],
-      },
-
-      a95: {
-        type: "0",
-        tankId: 0,
-        tube: 0,
-        maxHeight: 0,
-        maxCapacity: 0,
-        minCapcity: 0,
-        capacityTable: [],
-      },
-      diesel: {
-        type: "0",
-        tankId: 0,
-        tube: 0,
-        maxHeight: 0,
-        maxCapacity: 0,
-        minCapcity: 0,
-        capacityTable: [],
       },
     },
   },

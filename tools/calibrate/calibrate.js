@@ -3,13 +3,21 @@ const btnAutoCalibrate = document.querySelector("#calibrateConfirm"),
   selectGsSection = document.querySelector(".selectGS"),
   autoCalibrateSection = document.querySelector(".autocalibrate"),
   manualCalibrateSection = document.querySelector(".manualcalibrate"),
-  autoCalibrateButton = document.querySelector("autocalibrateResult");
+  autoCalibrateButton = document.querySelector("#autocalibrateResult"),
+  resultZone = document.querySelector("#calibrate__result"),
+  alertZone = document.querySelector("#calibate__alert");
+unSelectFuelType = document.querySelector("#unSelectFuelType");
 let gsId;
 
+for (key in gsDB) {
+  const option = document.querySelector("#gsID");
+  const gs = `<option value="${key}">АЗС№ ${gsDB[key].gsId} "${gsDB[key].gsFirm}"</option>`;
+  option.insertAdjacentHTML("afterbegin", gs);
+}
 // Autocalibrate function
 const autoCalibrate = (height, tank) => {
-  const levelHi = Math.ceil(height);
-  const levelLow = Math.floor(height);
+  const levelHi = Math.ceil(height),
+    levelLow = Math.floor(height);
 
   if (height % 1) {
     afterRound = +(height + "").split(".")[1].substr(0, 1);
@@ -21,7 +29,7 @@ const autoCalibrate = (height, tank) => {
     ((tank.capacityTable[levelHi] - tank.capacityTable[levelLow]) / 10) *
     afterRound;
 
-  const autoCalibrateResult = Math.round(
+  let autoCalibrateResult = Math.round(
     tank.capacityTable[levelLow] + tank.tube + tail
   );
 
@@ -52,13 +60,17 @@ btnAutoCalibrate.addEventListener("click", () => {
   selectGsSection.classList.toggle("display-none");
   gsId = document.querySelector("#gsID").value;
   if (gsId === "unSelect") {
-    document.querySelector(
-      "#calibate__alert"
-    ).innerHTML = `Не выбрана АЗС </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
-    document.querySelector("#calibrate__result").scrollIntoView();
+    alertZone.innerHTML = `Не выбрана АЗС </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
+    resultZone.scrollIntoView();
   } else autoCalibrateSection.classList.toggle("display-none");
-});
 
+  for (key in gsDB[gsId].tables) {
+    const option = document.querySelector("#autocalibrateFuelType");
+    const tables = gsDB[gsId].tables;
+    const fuel = `<option value="${key}">${tables[key].tankId}. ${tables[key].type} </option>`;
+    option.insertAdjacentHTML("beforeend", fuel);
+  }
+});
 btnManualCalibrate.addEventListener("click", () => {
   selectGsSection.classList.toggle("display-none");
   manualCalibrateSection.classList.toggle("display-none");
@@ -69,40 +81,48 @@ document
   .querySelector(".autocalibrate__form")
   .addEventListener("submit", (e) => {
     e.preventDefault();
-    document.querySelector("#calibrate__result").innerHTML = ``;
-    document.querySelector("#calibate__alert").innerHTML = ``;
+    resultZone.innerHTML = ``;
+    alertZone.innerHTML = ``;
+
     const autoCalibrateInputHeight = document.querySelector(
         "#autocalibrateHeight"
       ).value,
       autocalibrateType = document.querySelector(
         "#autocalibrateFuelType"
-      ).value,
-      calculate = autoCalibrate(
+      ).value;
+    if (autocalibrateType === "unSelect") {
+      alertZone.innerHTML = `Выберите вид топлива!`;
+      alertZone.scrollIntoView({
+        block: "center",
+        behavior: "smooth",
+      });
+    } else {
+      let calculate = autoCalibrate(
         autoCalibrateInputHeight,
         gsDB[gsId].tables[autocalibrateType]
       );
-    const tank = gsDB[gsId].tables[autocalibrateType];
-    // Minimal Capacity Test
-    if (calculate <= tank.minCapcity) {
-      document.querySelector(
-        "#calibate__alert"
-      ).innerHTML = `Внимание, остаток топлива ниже мёртвого остатка! (${tank.minCapcity}л.)`;
-    }
+      const tank = gsDB[gsId].tables[autocalibrateType];
+      const tubeCheck = document.querySelector("#tubeCheck").checked;
+      if (!tubeCheck) {
+        calculate -= tank.tube;
+      }
 
-    // Maximum capacity Test, Type Test
-    if (calculate) {
-      document.querySelector(
-        "#calibrate__result"
-      ).innerHTML = `Объём топлива = ${calculate}л. </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
-    } else {
-      document.querySelector(
-        "#calibate__alert"
-      ).innerHTML = `Введите корректное значение!`;
+      // Minimal Capacity Test
+      if (calculate <= tank.minCapcity) {
+        alertZone.innerHTML = `Внимание, остаток топлива ниже мёртвого остатка! (${tank.minCapcity}л.)`;
+      }
+
+      // Maximum capacity Test, Type Test
+      if (calculate) {
+        resultZone.innerHTML = `Объём топлива = ${calculate}л. </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
+      } else {
+        alertZone.innerHTML = `Введите корректное значение!`;
+      }
+      alertZone.scrollIntoView({
+        block: "center",
+        behavior: "smooth",
+      });
     }
-    document.querySelector("#calibate__alert").scrollIntoView({
-      block: "center",
-      behavior: "smooth",
-    });
   });
 
 // Manual Calibrate
@@ -110,8 +130,8 @@ document
   .querySelector(".manualcalibrate__form")
   .addEventListener("submit", (e) => {
     e.preventDefault();
-    document.querySelector("#calibrate__result").innerHTML = ``;
-    document.querySelector("#calibate__alert").innerHTML = ``;
+    resultZone.innerHTML = ``;
+    alertZone.innerHTML = ``;
     const manualCalibrateHeight =
         document.querySelector("#maunualHeight").value,
       manualCalibrateCapacityHi = document.querySelector("#manualCapHi").value,
@@ -125,16 +145,11 @@ document
         manualCalibrateTube
       );
     if (calculate) {
-      document.querySelector(
-        "#calibrate__result"
-      ).innerHTML = `Объём топлива = ${calculate}л. </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
+      resultZone.innerHTML = `Объём топлива = ${calculate}л. </br></br><a href="/tools/calibrate/calibrate.html" class="btn back-btn manual__back-btn">← Вернуться назад</a>`;
     } else {
-      document.querySelector(
-        "#calibate__alert"
-      ).innerHTML = `Введите корректное значение!`;
+      alertZone.innerHTML = `Введите корректное значение!`;
     }
-
-    document.querySelector("#calibrate__result").scrollIntoView({
+    resultZone.scrollIntoView({
       block: "center",
       behavior: "smooth",
     });

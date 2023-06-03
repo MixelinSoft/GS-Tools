@@ -50,16 +50,6 @@
           <li class="nav__item">
             <a href="/index.html" class="nav__link">Главная страница</a>
           </li>
-          <!-- <li class="nav__item">
-            <a href="/supply.html">О приложении</a>
-          </li>
-          <li class="nav__item">
-            <a href="/contacts.html">Контакты</a>
-          </li>
-          <li class="nav__item">
-            <a href="/supply.html">Поддержать разработку</a>
-          </li>
-        </ul> -->
       </nav>
     </header>
 
@@ -71,10 +61,6 @@
           <label for="gsID" class="form__label">Выберите вашу АЗС:</label>
           <select name="gsID" id="gsID" class="form__select" required>
             <option value="unSelect" selected disabled>Нажмите для выбора АЗС</option>
-            <option value="gs07" disabled>АЗС №7 "Примариус"</option>
-            <option value="gs29" disabled>АЗС №29 "Примариус"</option>
-            <option value="gs16">АЗС №16 "Примариус"</option>
-            <option value="gs17" disabled>АЗС №17 "Примариус"</option>
           </select>
           <button class="calibrate__confirm btn txt-btn" id="calibrateConfirm">
             Подтвердить выбор
@@ -88,18 +74,14 @@
 
       <section class="autocalibrate display-none">
         <form class="autocalibrate__form form">
-          <label for="fuelType" class="form__label">Выберите вид топлива</label>
-          <select
-            name="fuelType"
+          <label for="fuelType" class="form__label">НАжмите для выбора</label>
+
+          <select name="fuelType"
             id="autocalibrateFuelType"
-            class="form__select"
-            required
-          >
-            <option value="a95e">1. А95 Energy</option>
-            <option value="a92">2. А92</option>
-            <option value="a95">3. А95</option>
-            <option value="diesel">4. Дизельное топливо</option>
+            class="form__select">
+            <option value="unSelect" id="unSelectFuelType" selected disabled>Выберите вид топлива</option>
           </select>
+
           <label class="form__label"
             >Введите уровень с метрштока через точку (Например - 123.3)</label
           >
@@ -109,7 +91,11 @@
             id="autocalibrateHeight"
             placeholder="Уровень топлива"
             class="form__select"
-          />
+          />    
+          <div class="form__select">
+            <input type="checkbox" id="tubeCheck" checked>
+            <label for="tubeCheck">Учитывать трубопровод в рассчётах?</label>
+          </div>
           <button type="submit" class="btn txt-btn" id="autocalibrateResult">
             Рассчитать!
           </button>
