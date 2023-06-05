@@ -11,8 +11,10 @@ let gsId;
 
 for (key in gsDB) {
   const option = document.querySelector("#gsID");
-  const gs = `<option value="${key}">АЗС№ ${gsDB[key].gsId} "${gsDB[key].gsFirm}"</option>`;
-  option.insertAdjacentHTML("afterbegin", gs);
+  if (!(gsDB[key].tables == undefined)) {
+    const gs = `<option value="${key}">АЗС№ ${gsDB[key].gsId} "${gsDB[key].gsFirm}"</option>`;
+    option.insertAdjacentHTML("afterbegin", gs);
+  }
 }
 // Autocalibrate function
 const autoCalibrate = (height, tank) => {
