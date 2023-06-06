@@ -5,15 +5,15 @@ const btnAutoCalibrate = document.querySelector("#calibrateConfirm"),
   manualCalibrateSection = document.querySelector(".manualcalibrate"),
   autoCalibrateButton = document.querySelector("#autocalibrateResult"),
   resultZone = document.querySelector("#calibrate__result"),
-  alertZone = document.querySelector("#calibate__alert");
-unSelectFuelType = document.querySelector("#unSelectFuelType");
+  alertZone = document.querySelector("#calibate__alert"),
+  unSelectFuelType = document.querySelector("#unSelectFuelType");
 let gsId;
 
 for (key in gsDB) {
   const option = document.querySelector("#gsID");
   if (!(gsDB[key].tables == undefined)) {
     const gs = `<option value="${key}">АЗС№ ${gsDB[key].gsId} "${gsDB[key].gsFirm}"</option>`;
-    option.insertAdjacentHTML("afterbegin", gs);
+    option.insertAdjacentHTML("beforeend", gs);
   }
 }
 // Autocalibrate function

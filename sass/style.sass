@@ -113,93 +113,9 @@ a
   font-size: 14px
   z-index: 1
 
-// Buttons
-.btn
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
-  margin: 10px
-  padding: 20px
-  color: white
-  background-color: black
-  border-radius: 20px
-  filter: drop-shadow(0 3px 4px #2d2d2d)
-  transition: transform .1s linear
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-  cursor: pointer
-  &:focus
-    outline: 3px solid grey
-
-.tool__title
-  font-size: 18px
-  text-align: center
-  text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.3)
-
-.tool__icon
-  filter: drop-shadow(1px 2px 4px rgba(255, 255, 255, 0.3))
-
-.btn:hover
-  transform: translateY(-2px)
-
-.btn:active
-  filter: drop-shadow(0 1px 4px #2d2d2d)
-  transform: translateY(2px)
-  outline: none
-
-.tool
-  width: 150px
-  height: 150px
-
-.txt-btn
-  font-size: 18px
-  min-width: 300px
-  font-weight: 700
-
-.back-btn
-  position: absolute
-  bottom: 40px
-  left: 10px
-  display: inline-block
-  margin: 5px
-
-.manual__back-btn
-  font-size: 18px
-  position: static
-
-// Forms
-.form
-  display: flex
-  flex-direction: column
-  align-items: center
-  width: 100%
-  padding: 15px, 15px, 0, 15px
-
-.form__label
-  text-align: center
-  font-size: 16px
-  margin-bottom: 10px
-  font-weight: 700
-
-.form__select
-  width: 300px
-  font-size: 20px
-  text-align: left
-  margin-bottom: 15px
-  padding: 10px
-  cursor: pointer
-  &:focus
-    outline: 3px solid grey
-
-.calibrate__result
-  text-align: center
-  font-size: 22px
-  font-weight: 700
-
-.calibrate__alert
-  text-align: center
-  font-size: 22px
-  font-weight: 700
-  color: red
 .display-none
   display: none
+
+@import buttonsAndForms.sass
+@import directory.sass
+@import calibrate.sass

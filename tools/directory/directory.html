@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GS Tools</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header__logo-link" tabindex="1">
+        <img
+          src="/img/logo_mobile30px.png "
+          alt="logo"
+          class="header__logo-img"
+        />
+      </a>
+
+      <nav class="nav">
+        <div class="nav__burger" tabindex="2">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Главная страница</a>
+          </li>
+          <!-- <li class="nav__item">
+            <a href="/supply.html">О приложении</a>
+          </li>
+          <li class="nav__item">
+            <a href="/contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a href="/supply.html">Поддержать разработку</a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="main__title">Книга контактов и адресов</h1>
+
+      <section class="gs-select__section">
+        <form class="gs-select__form form">
+          <select
+            name="gsID"
+            id="gsID"
+            class="form__select gs-select__select"
+            required
+          >
+            <option value="unSelect" selected disabled>
+              Нажмите для выбора АЗС
+            </option>
+          </select>
+          <button class="gs-select__confirm btn txt-btn" id="gsSelectConfirm">
+            Подтвердить выбор
+          </button>
+        </form>
+        <a href="/index.html" class="btn back-btn">← Вернуться назад</a>
+      </section>
+
+      <section class="gs-card__section display-none">
+        <!-- <article class="gs-card">
+        </article> -->
+
+        <article class="gs-card">
+          <h2 class="gs-card__title" id="gsCardTitle"></h2>
+          <p class="gs-card__firm" id="gsCardFirm"></p>
+          <a href="#" class="gs-card__number" id="gsCardNumber"></a>
+          <address class="gs-card__address" id="gsCardAddress">
+            м.Днiпро, вул.Маяковського, 39
+          </address>
+          <div class="gs-card__map display-none" id="gsCardMap"></div>
+          <!-- <div class="gs-card__map" id="gs-card__map"></div> -->
+        </article>
+        <a href="#" class="btn back-btn" id="backJS">← Вернуться назад</a>
+      </section>
+
+      <p class="calibrate__result" id="calibrate__result"></p>
+      <p class="calibrate__alert" id="calibate__alert"></p>
+    </main>
+
+    <footer class="footer">MixelinSoft© 2023</footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/DB/gsDB.js"></script>
+    <script src="/tools/directory/directory.js"></script>
+  </body>
+</html>
