@@ -292,6 +292,12 @@ a:focus {
   outline: 3px solid grey;
 }
 
+#tubeCheck {
+  margin-right: 5px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 .gs-card__section {
   padding: 0;
 }

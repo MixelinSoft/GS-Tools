@@ -86,9 +86,9 @@ document
     resultZone.innerHTML = ``;
     alertZone.innerHTML = ``;
 
-    const autoCalibrateInputHeight = document.querySelector(
-        "#autocalibrateHeight"
-      ).value,
+    const autoCalibrateInputHeight = document
+        .querySelector("#autocalibrateHeight")
+        .value.replace(",", "."),
       autocalibrateType = document.querySelector(
         "#autocalibrateFuelType"
       ).value;
@@ -134,8 +134,9 @@ document
     e.preventDefault();
     resultZone.innerHTML = ``;
     alertZone.innerHTML = ``;
-    const manualCalibrateHeight =
-        document.querySelector("#maunualHeight").value,
+    const manualCalibrateHeight = document
+        .querySelector("#maunualHeight")
+        .value.replace(",", "."),
       manualCalibrateCapacityHi = document.querySelector("#manualCapHi").value,
       manualCalibrateCapacityLow =
         document.querySelector("#manualCapLow").value,
