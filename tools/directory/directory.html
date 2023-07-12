@@ -97,11 +97,18 @@
           <h2 class="gs-card__title" id="gsCardTitle"></h2>
           <p class="gs-card__firm" id="gsCardFirm"></p>
           <a href="#" class="gs-card__number" id="gsCardNumber"></a>
-          <address class="gs-card__address" id="gsCardAddress">
-            м.Днiпро, вул.Маяковського, 39
-          </address>
-          <div class="gs-card__map display-none" id="gsCardMap"></div>
-          <!-- <div class="gs-card__map" id="gs-card__map"></div> -->
+          <address class="gs-card__address" id="gsCardAddress"></address>
+          <div class="gs-card__map display-none">
+            <iframe
+              id="gsCardMap"
+              style="border: 0"
+              width="100%"
+              height="100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </article>
         <a href="#" class="btn back-btn" id="backJS">← Вернуться назад</a>
       </section>

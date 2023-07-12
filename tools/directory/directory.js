@@ -5,10 +5,11 @@ const confirmBtn = document.querySelector("gsSelectConfirm"),
   cardFirm = document.querySelector("#gsCardFirm"),
   cardPhone = document.querySelector("#gsCardNumber"),
   cardAddress = document.querySelector("#gsCardAddress"),
-  // cardMap = document.querySelector("#gsCardMap"),
-  resultZone = document.querySelector("#calibrate__result"),
-  alertZone = document.querySelector("#calibate__alert"),
-  backBtn = document.querySelector("#backJS");
+  cardMap = document.getElementById("gsCardMap"),
+  cardMapContainer = document.querySelector(".gs-card__map");
+(resultZone = document.querySelector("#calibrate__result")),
+  (alertZone = document.querySelector("#calibate__alert")),
+  (backBtn = document.querySelector("#backJS"));
 
 for (key in gsDB) {
   const option = document.querySelector("#gsID");
@@ -40,6 +41,11 @@ document.querySelector("#gsSelectConfirm").addEventListener("click", () => {
       2
     )}`;
     cardAddress.innerHTML = `${gs.address}`;
+    if (gs.gps !== undefined) {
+      cardMapContainer.classList.remove("display-none");
+      console.log(gs.gps);
+      cardMap.src = gs.gps;
+    }
     selectSection.classList.toggle("display-none");
     cardSection.classList.toggle("display-none");
   }
@@ -47,6 +53,8 @@ document.querySelector("#gsSelectConfirm").addEventListener("click", () => {
 
 backBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  cardMap.src = "";
+  cardMapContainer.classList.add("display-none");
   selectSection.classList.toggle("display-none");
   cardSection.classList.toggle("display-none");
 });

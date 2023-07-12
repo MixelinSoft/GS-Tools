@@ -8,7 +8,7 @@ const gsDB = {
     gsId: 01,
     gsFirm: firms.prima,
     // phone: "+380",
-    address: "м. Днiпро, пр. Богдана Хемельницького, 135",
+    address: "м. Днiпро, пр. Богдана Хмельницького, 135",
   },
 
   gs02: {
@@ -16,6 +16,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632966982",
     address: "м. Днiпро, вул. Космiчна, 30",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.1825530972822!2d35.04026253207326!3d48.41113451104672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbfb589c0864a1%3A0xec21b7536cd4d9cc!2z0YPQuy4g0JrQvtGB0LzQuNGH0LXRgdC60LDRjywgMzAsINCU0L3QtdC_0YAsINCU0L3QtdC_0YDQvtC_0LXRgtGA0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0OTAwMA!5e0!3m2!1sru!2sua!4v1689170965074!5m2!1sru!2sua",
   },
 
   gs06: {
@@ -23,13 +24,15 @@ const gsDB = {
     gsFirm: firms.prima,
     // phone: "+",
     address: "м. Днiпро, Донецьке шосе, 25-а",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1321.478538528204!2d34.99997811474409!3d48.51488751157993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe200f05cf68f%3A0xeb74745d2f4afa26!2z0JTQvtC90LXRhtC60L7QtSDRiC4sIDI1LCDQlNC90LXQv9GALCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1689171256579!5m2!1sru!2sua",
   },
 
   gs07: {
     gsId: 07,
     gsFirm: firms.prima,
     phone: "+380632967051",
-    address: "м. Днiпро, вул.Робоча, 23ж",
+    address: "м. Днiпро, вул.Робоча, 23-ж",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1322.8904305869276!2d35.00733562851025!3d48.46073399833822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe306c3adff95%3A0x356ef5a41f275d47!2sAvias!5e0!3m2!1sru!2sua!4v1689171375973!5m2!1sru!2sua",
     tables: {
       a95e: {
         type: "A-95 Energy",
@@ -191,6 +194,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967213",
     address: "м. Днiпро, вул. Кротова, 40",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.582866318761!2d34.97210692518881!3d48.395760333480546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe4d0caba5113%3A0x7f3eb1b5df822231!2sAzs%20%22Avias%22!5e0!3m2!1sru!2sua!4v1689171860504!5m2!1sru!2sua",
   },
 
   gs16: {
@@ -198,6 +202,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967329",
     address: "м. Днiпро, вул.Маяковського, 39",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10580.044319577402!2d34.95703040013044!3d48.475501078863616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe3cebc4f9c37%3A0x8a9aebd3724eb8c9!2z0LLRg9C7LiDQnNCw0Y_QutC-0LLRgdGM0LrQvtCz0L4sIDM5LCDQlNC90ZbQv9GA0L4sINCU0L3RltC_0YDQvtC_0LXRgtGA0L7QstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA0OTAwMA!5e0!3m2!1sru!2sua!4v1689165717692!5m2!1sru!2sua",
     tables: {
       a95e: {
         type: "A-95 Energy",
@@ -342,6 +347,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967353",
     address: "м. Днiпро, пр.Сергiя Нiгояна, 87",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2644.995270771918!2d34.972663796327865!3d48.47580431746021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe3cbc76781c7%3A0xdddb4df4964f2d95!2sUkrnafta!5e0!3m2!1sru!2sua!4v1689172680400!5m2!1sru!2sua",
   },
 
   gs20: {
@@ -349,6 +355,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967401",
     address: "м. Днiпро, Запорiзьске шосе, 88",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d662.3715026493434!2d35.04064158914979!3d48.38960911078709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbfb6d4b407bcd%3A0x61570d0dbf515d4e!2z0JfQsNC_0L7RgNC-0LbRgdC60L7QtSDRiC4sIDg4LCDQlNC90LXQv9GALCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1689172844672!5m2!1sru!2sua",
   },
 
   gs25: {
@@ -356,6 +363,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967461",
     address: "м. Днiпро, вул. Пилипа Орлика, 23-а",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1323.1899412805967!2d35.02123143683088!3d48.44924035281803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe3164995ce53%3A0x8ddd5baacde43f02!2z0JDQl9ChINCQ0JLQmNCQ0KEg0J_Qm9Cu0KE!5e0!3m2!1sru!2sua!4v1689172964410!5m2!1sru!2sua",
   },
 
   gs26: {
@@ -363,12 +371,13 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967502",
     address: "м. Днiпро, вул. Курчатова, 3",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d661.2727875245564!2d35.011523719773585!3d48.473965211112535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe25699d8b88b%3A0x7038b11295d51a7e!2z0YPQuy4g0JrRg9GA0YfQsNGC0L7QstCwLCAz!5e0!3m2!1sru!2sua!4v1689173124891!5m2!1sru!2sua",
   },
 
   gs27: {
     gsId: 27,
     gsFirm: firms.prima,
-    phone: "+380",
+    // phone: "+380",
     address: "м. Днiпро",
   },
 
@@ -385,6 +394,7 @@ const gsDB = {
     gsFirm: firms.prima,
     phone: "+380632967519",
     address: "м. Днiпро, вул. Ульянова, 17",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d330.72024981747313!2d35.02441530816781!3d48.4610958895177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe31d22f57859%3A0x130bce2eb9b8d41f!2sAvias%20Plus!5e0!3m2!1sru!2sua!4v1689173254901!5m2!1sru!2sua",
   },
 
   gs30a: {
@@ -439,6 +449,7 @@ const gsDB = {
     gsFirm: firms.alete,
     phone: "+380933071184",
     address: "м. Днiпро, вул. Набережна Сiчеславська, 57",
+    gps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d661.3793922357871!2d35.06733668478566!3d48.465785237806244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2c606bb2fb3%3A0xb36f2e1e9199232!2z0K7QutC-0L0g0YHQtdGA0LLQuNGBINCQ0LfRgSMy!5e0!3m2!1sru!2sua!4v1689173352245!5m2!1sru!2sua",
   },
 };
 
