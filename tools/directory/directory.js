@@ -14,7 +14,7 @@ for (key in gsDB) {
   const option = document.querySelector("#gsID");
   if (!(gsDB[key].phone == undefined)) {
     const gs = `<option value="${key}">АЗС№ ${gsDB[key].gsId} "${gsDB[key].gsFirm}"</option>`;
-    option.insertAdjacentHTML("afterbegin", gs);
+    option.insertAdjacentHTML("beforeend", gs);
   }
 }
 
