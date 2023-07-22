@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GS Tools</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="icons/favicon/site.webmanifest" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header__logo-link">
+        <img src="/img/logo_mobile30px.png" alt="logo" class="header__logo-img" />
+      </a>
+
+      <nav class="nav">
+        <div class="nav__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Главная страница</a>
+          </li>
+      </nav>
+    </header>
+
+    <main class="main calibrate">
+      <h1 class="main__title">Обратная калибровка топлива</h1>
+
+      <section class="selectGS-window">
+        <form class="selectGS-form form">
+          <label for="gsID" class="form__label">Выберите вашу АЗС:</label>
+          <select name="gsID" id="gsID" class="form__select" required>
+            <option value="unSelect" selected disabled>Нажмите для выбора АЗС</option>
+          </select>
+          <button class="calibrate__confirm btn txt-btn" id="calibrateConfirm">
+            Подтвердить выбор
+          </button>
+        </form>
+        <a href="/index.html" class="btn back-btn" id="backToMain">← Вернуться назад</a>
+      </section>
+
+      <section class="calibrate-window display-none">
+        <form class="calibrate__form   form" id="calibrateForm">
+          <label for="fuelType" class="form__label">Выберите вид топлива</label>
+
+          <select name="fuelType"
+            id="autocalibrateFuelType"
+            class="form__select">
+            <option value="unSelect" id="unSelectFuelType" selected disabled>Нажмите для выбора вида топлива</option>
+          </select>
+
+          <label class="form__label"
+            >Введите фактический объём топлива (Например - 1234.5)</label
+          >
+          <input
+            required
+            type=""
+            id="calibrateValue"
+            placeholder="Объём топлива"
+            class="form__select"
+          />    
+          <button type="submit" class="btn txt-btn" id="calibrateResult">
+            Рассчитать!
+          </button>
+        </form>
+        <a href="#" class="btn back-btn" id="backToSelect">← Вернуться назад</a>
+      </section>
+
+      <p class="calibrate__result" id="calibrate__result"></p>
+      <p class="calibrate__alert" id="calibate__alert"></p>
+      
+    </main>
+
+    <footer class="footer">MixelinSoft© 2023</footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/DB/gsDB.js"></script>
+    <script src="/tools/backcalibrate/backcalibrate.js"></script>
+  </body>
+</html>
