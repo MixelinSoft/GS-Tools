@@ -8,27 +8,23 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="icons/favicon/apple-touch-icon.png"
-    />
+      href="icons/favicon/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="icons/favicon/favicon-32x32.png"
-    />
+      href="icons/favicon/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="icons/favicon/favicon-16x16.png"
-    />
+      href="icons/favicon/favicon-16x16.png" />
     <!-- <link rel="manifest" href="icons/favicon/site.webmanifest" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
@@ -36,7 +32,10 @@
   <body>
     <header class="header">
       <a href="/index.html" class="header__logo-link">
-        <img src="/img/logo_mobile30px.png" alt="logo" class="header__logo-img" />
+        <img
+          src="/img/logo_mobile30px.png"
+          alt="logo"
+          class="header__logo-img" />
       </a>
 
       <nav class="nav">
@@ -50,6 +49,7 @@
           <li class="nav__item">
             <a href="/index.html" class="nav__link">Главная страница</a>
           </li>
+        </ul>
       </nav>
     </header>
 
@@ -60,7 +60,9 @@
         <form class="calibrate__form form">
           <label for="gsID" class="form__label">Выберите вашу АЗС:</label>
           <select name="gsID" id="gsID" class="form__select" required>
-            <option value="unSelect" selected disabled>Нажмите для выбора АЗС</option>
+            <option value="unSelect" selected disabled>
+              Нажмите для выбора АЗС
+            </option>
           </select>
           <button class="calibrate__confirm btn txt-btn" id="calibrateConfirm">
             Подтвердить выбор
@@ -76,10 +78,13 @@
         <form class="autocalibrate__form form">
           <label for="fuelType" class="form__label">Выберите вид топлива</label>
 
-          <select name="fuelType"
+          <select
+            name="fuelType"
             id="autocalibrateFuelType"
             class="form__select">
-            <option value="unSelect" id="unSelectFuelType" selected disabled>Нажмите для выбора вида топлива</option>
+            <option value="unSelect" id="unSelectFuelType" selected disabled>
+              Нажмите для выбора вида топлива
+            </option>
           </select>
 
           <label class="form__label"
@@ -90,16 +95,15 @@
             type=""
             id="autocalibrateHeight"
             placeholder="Уровень топлива"
-            class="form__select"
-          />    
+            class="form__select" />
           <div class="form__select">
-            <input type="checkbox" id="tubeCheck" checked>
+            <input type="checkbox" id="tubeCheck" checked />
             <label for="tubeCheck">Учитывать трубопровод в рассчётах</label>
           </div>
           <button type="submit" class="btn txt-btn" id="autocalibrateResult">
             Рассчитать!
           </button>
-        </form>        
+        </form>
       </section>
 
       <section class="manualcalibrate display-none">
@@ -112,8 +116,7 @@
             type=""
             id="maunualHeight"
             placeholder="Уровень топлива"
-            class="form__select"
-          />
+            class="form__select" />
           <label for="manualCapHi" class="form__label"
             >Введите обьём с калибровочной таблицы для верхнего значения
             (Например 4321)</label
@@ -123,8 +126,7 @@
             type="number"
             id="manualCapHi"
             placeholder="Верхнее значение"
-            class="form__select"
-          />
+            class="form__select" />
           <label for="manualCapLow" class="form__label"
             >Введите обьём с калибровочной таблицы для нижнего значения
             (Например 1234)</label
@@ -134,8 +136,7 @@
             type="number"
             id="manualCapLow"
             placeholder="Нижнее значение"
-            class="form__select"
-          />
+            class="form__select" />
           <label for="manualTube" class="form__label"
             >Введите объём трубопровода (Например 123)</label
           >
@@ -144,16 +145,15 @@
             type="number"
             id="manualTube"
             placeholder="Трубопровод"
-            class="form__select"
-          />
-          <button type="submit" class="btn txt-btn" id="manual-result">Рассчитать!</button>
+            class="form__select" />
+          <button type="submit" class="btn txt-btn" id="manual-result">
+            Рассчитать!
+          </button>
         </form>
-
       </section>
 
       <p class="calibrate__result" id="calibrate__result"></p>
       <p class="calibrate__alert" id="calibate__alert"></p>
-      
     </main>
 
     <footer class="footer">MixelinSoft© 2023</footer>

@@ -178,7 +178,21 @@ a:focus {
   display: none;
 }
 
+.version {
+  font-size: 14px;
+  color: red;
+}
+
+.new::after {
+  position: absolute;
+  content: "New!";
+  color: red;
+  right: -14px;
+  top: 0px;
+}
+
 .btn {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,6 +310,11 @@ a:focus {
   margin-right: 5px;
   -webkit-transform: scale(2);
           transform: scale(2);
+}
+
+.hours-small {
+  width: 100px;
+  margin-left: 200px;
 }
 
 .gs-card__section {

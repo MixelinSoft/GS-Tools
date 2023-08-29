@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GS Tools</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="icons/favicon/site.webmanifest" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header__logo-link">
+        <img
+          src="/img/logo_mobile30px.png"
+          alt="logo"
+          class="header__logo-img" />
+      </a>
+
+      <nav class="nav">
+        <div class="nav__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Главная страница</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main salary">
+      <h1 class="main__title">
+        Калькулятор зарплаты <span class="version">beta v0.0.1</span>
+      </h1>
+
+      <section class="salary">
+        <form action="get" class="form">
+          <label for="hours" class="form__label"
+            >Введите количество отработанных часов (Например - 192)</label
+          >
+          <input
+            required
+            type="number"
+            id="hours"
+            placeholder="Количество часов"
+            class="form__select" />
+
+          <label for="hour" class="form__label"
+            >Введите цену одного часа (по умолчанию - 40.90 грн)</label
+          >
+          <input
+            required
+            type="number"
+            id="hour"
+            value="40.90"
+            class="form__select hours-small" />
+
+          <label for="litres" class="form__label"
+            >Введите количество проданных литров топлива (Например -
+            4321)</label
+          >
+          <input
+            required
+            type="number"
+            id="litres"
+            placeholder="Количество литров"
+            class="form__select" />
+
+          <label for="liter" class="form__label"
+            >Введите цену одного литра (по умолчанию - 0.12 грн)</label
+          >
+          <input
+            required
+            type="number"
+            id="liter"
+            value="0.12"
+            class="form__select hours-small" />
+
+          <button type="submit" class="btn txt-btn" id="salary">
+            Рассчитать!
+          </button>
+
+          <p class="calibrate__result" id="calibrate__result"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">MixelinSoft© 2023</footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/DB/gsDB.js"></script>
+    <script src="/tools/salary/salary.js"></script>
+  </body>
+</html>
